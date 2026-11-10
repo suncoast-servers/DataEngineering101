@@ -1,0 +1,18 @@
+# Batch ETL capstone — extends core services + one-shot Python runner
+include:
+  - path: ../core/docker-compose.yml
+
+services:
+  etl:
+    profiles: [batch]
+    build:
+      context: ./etl
+    restart: "no"
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-de101}:${POSTGRES_PASSWORD:-de101_local_change_me}@postgres:5432/${POSTGRES_DB:-de101}
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: ${MINIO_ROOT_USER:-de101minio}
+      MINIO_SECRET_KEY: ${MINIO_ROOT_PASSWORD:-de101_local_change_me}
+    depends_on:
+      postgres:
+        condition: service_healthy

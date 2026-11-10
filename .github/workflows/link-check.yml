@@ -1,0 +1,16 @@
+name: Link check
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check internal repo paths exist
+        run: |
+          test -f content/index.mdx
+          test -f labs/compose/core/docker-compose.yml
+          test -f docs/disclosure.md

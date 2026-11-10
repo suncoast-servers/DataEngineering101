@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dataengineering101.pages.dev/sitemap-index.xml

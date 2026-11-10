@@ -1,0 +1,50 @@
+---
+title: Docker for labs
+description: Install Docker, run the core lab stack, and verify Postgres and MinIO.
+sidebar:
+  order: 4
+---
+
+## Why
+
+You cannot learn pipelines without running databases and object storage. Docker lets everyone run the **same stack** without manual installs.
+
+## Concept
+
+- **Image** — blueprint for a service (Postgres, MinIO).
+- **Container** — running instance of an image.
+- **Compose** — YAML file that starts multiple services together.
+
+## Do
+
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows/Mac) or Docker Engine on Linux.
+2. From the repo root:
+
+```bash
+cd labs/compose/core
+cp .env.example .env
+docker compose --profile core up -d
+docker compose ps
+```
+
+3. Postgres: host `localhost`, port `5432`, user/db from `.env.example`.
+4. MinIO console: `http://localhost:9001` (credentials in `.env.example`).
+
+## AI prompt card
+
+> `docker compose ps` shows a container restarting. List diagnostic steps in order and which logs to read first.
+
+## Exercise
+
+Connect to Postgres with any client (`psql`, DBeaver, VS Code SQL extension) and run `SELECT version();`.
+
+Create a MinIO bucket named `de101-lab` via the console.
+
+## Check
+
+- What command stops the stack without deleting volumes?
+- Why do we use `.env` instead of putting passwords in `docker-compose.yml`?
+
+## Portfolio hook
+
+Record the exact commands you used to start and stop the lab stack in `notes/path-0-docker.md`.

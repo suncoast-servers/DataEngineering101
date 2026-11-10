@@ -1,0 +1,24 @@
+---
+title: Labs overview
+description: Docker Compose stacks for local machines and VPS deploys.
+sidebar:
+  order: 90
+---
+
+## Layout
+
+| Directory | Purpose |
+|-----------|---------|
+| [`labs/compose/core`](https://github.com/TheDevWhoSaysNI/DataEngineering101/tree/main/labs/compose/core) | Postgres + MinIO (`--profile core`) |
+| [`labs/compose/capstone-batch`](https://github.com/TheDevWhoSaysNI/DataEngineering101/tree/main/labs/compose/capstone-batch) | Batch ETL capstone (`--profile batch`) |
+| [`labs/compose/DEPLOY.md`](https://github.com/TheDevWhoSaysNI/DataEngineering101/blob/main/labs/compose/DEPLOY.md) | Hetzner / VPS deploy |
+
+## Quick start
+
+```bash
+cd labs/compose/core
+cp .env.example .env
+docker compose --profile core up -d
+```
+
+Exercises live under `labs/exercises/`; solutions under `labs/solutions/` (for self-check, not SEO).

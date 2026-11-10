@@ -1,0 +1,19 @@
+---
+title: Hetzner & VPS deploy
+description: Run the same Compose stacks on a small VPS.
+sidebar:
+  order: 91
+---
+
+Full operator guide: [`labs/compose/DEPLOY.md`](https://github.com/TheDevWhoSaysNI/DataEngineering101/blob/main/labs/compose/DEPLOY.md).
+
+## Summary
+
+1. Provision a Linux VPS (2 GB RAM minimum for `core`; 4 GB for capstone batch).
+2. Install Docker Engine and the Compose plugin.
+3. Clone this repo, copy `.env`, restrict ports with **UFW** (22, 443 only; do not expose Postgres to the public internet).
+4. Use SSH tunnel or VPN for admin UIs when learning.
+
+## Check
+
+- Why should Postgres port 5432 not be public on the internet?

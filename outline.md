@@ -1,5 +1,7 @@
 # Data Engineering 101 Outline
 
+**Site paths (living syllabus):** Path 0 [`content/path-00-setup/`](content/path-00-setup/) through Path 10 [`content/path-10-career/`](content/path-10-career/). Lessons ship as MDX; labs in [`labs/compose/`](labs/compose/).
+
 ## 0. What Is Data Engineering?
 - Definition (plain English)
 - What problems data engineers solve
@@ -341,20 +343,20 @@
 ---
 
 ### Professional Organizations & Learning Bodies
-- :contentReference[oaicite:0]{index=0}
-- :contentReference[oaicite:1]{index=1}
-- :contentReference[oaicite:2]{index=2}
-- :contentReference[oaicite:3]{index=3}
-- Data engineering and analytics communities
+- [DAMA International](https://www.dama.org/) — data management body of knowledge
+- [The Data Engineering Podcast](https://www.dataengineeringpodcast.com/)
+- [Locally Optimistic](https://locallyoptimistic.com/) — data team culture and practice
+- [dbt Community](https://www.getdbt.com/community/) — analytics engineering
+- Data engineering and analytics communities (Reddit r/dataengineering, Slack/Discord groups tied to conferences below)
 
 ---
 
 ### Conferences & Events
-- :contentReference[oaicite:4]{index=4}
-- :contentReference[oaicite:5]{index=5}
-- :contentReference[oaicite:6]{index=6}
-- :contentReference[oaicite:7]{index=7}
-- Local meetups and virtual conferences
+- [Data + AI Summit](https://www.databricks.com/dataaisummit) (Databricks)
+- [Snowflake Summit](https://www.snowflake.com/summit/)
+- [Coalesce](https://coalesce.getdbt.com/) (dbt Labs)
+- [Kafka Summit](https://www.kafka-summit.org/)
+- Local meetups and virtual conferences (Meetup.com, city-specific data eng groups)
 
 ---
 
